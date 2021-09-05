@@ -1,0 +1,42 @@
+@use '../util' as *;
+@use '../foundation/colors' as *;
+
+.toggle {
+  position: relative;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .background {
+    display: inline-block;
+    width: rem(43);
+    height: rem(22);
+    background: $toggle-background;
+    border-radius: rem(15);
+  }
+
+  .circle {
+    display: block;
+    width: rem(14);
+    height: rem(14);
+    background: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(rem(8), rem(4));
+    transition: all 200ms ease-out;
+  }
+
+  input[type="checkbox"]:checked ~ .background {
+    background: $toggle-background-checked;
+  }
+
+  input[type="checkbox"]:checked ~ .circle {
+    transform: translate(rem(27), rem(4));
+  }
+}

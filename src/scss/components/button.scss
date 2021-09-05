@@ -1,0 +1,16 @@
+@use '../util' as *;
+@use '../foundation/colors' as *;
+
+.button {
+  width: rem(170);
+  height: rem(41);
+  background: $cta-background;
+  color: $text-gray-blue;
+  border-radius: rem(20.5);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--white);
+  }
+}

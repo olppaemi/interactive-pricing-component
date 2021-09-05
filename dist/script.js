@@ -1,0 +1,1 @@
+"use strict";var slider=document.getElementById("slider"),views=document.querySelector(".views"),dollars=document.querySelector(".dollars");slider.addEventListener("input",(function(e){dollars.innerHTML="$".concat(Number(e.target.value).toFixed(2))}));

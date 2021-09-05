@@ -1,0 +1,20 @@
+@use '../foundation/colors' as *;
+@use '../util' as *;
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: rem(8);
+  cursor: pointer;
+  background: $full-slider-bar;
+  border-radius: rem(5);
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+    background: center / rem(22) rem(13) no-repeat url(/images/icon-slider.svg), $slider-background;
+    box-shadow: 0 rem(15) rem(30) hsla(174, 100%, 50%, 0.6);
+  }
+}

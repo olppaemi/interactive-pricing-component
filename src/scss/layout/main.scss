@@ -1,0 +1,144 @@
+@use '../util' as *;
+@use '../foundation/colors' as *;
+@use "sass:math";
+
+main {
+  width: rem(540);
+  height: rem(397);
+  background: $pricing-component-background;
+  border-radius: rem(8);
+  padding-top: rem(40);
+
+  @include breakpoint-down(medium) {
+    width: percentage(math.div(327, 375));
+    padding-top: rem(34);
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    padding: 0 rem(48);
+
+    @include breakpoint-down(medium) {
+      padding: 0;
+    }
+
+    &--border-top {
+      border-top: 1px solid var(--light-grayish-blue);
+    }
+  }
+
+  .pageviews-and-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "pageviews price"
+      "slider slider";
+    gap: rem(24) 0;
+    margin-bottom: rem(40);
+    align-items: center;
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "pageviews"
+        "slider"
+        "price";
+      justify-items: center;
+      padding: 0 rem(24);
+      margin-bottom: rem(34);
+    }
+
+    .pageviews {
+      grid-area: pageviews;
+    }
+
+    .price {
+      grid-area: price;
+      justify-self: end;
+      display: flex;
+      align-items: center;
+
+      .dollars {
+        margin-right: rem(8);
+      }
+
+      @include breakpoint-down(medium) {
+        justify-self: unset;
+      }
+    }
+
+    .slider {
+      grid-area: slider;
+    }
+  }
+
+  .select-billing {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: rem(40);
+
+    .toggle {
+      margin: 0 rem(12);
+    }
+
+    .discount {
+      margin-left: rem(9);
+      margin-right: rem(16);
+
+      @include breakpoint-down(medium) {
+        margin-left: rem(5.5);
+        margin-right: rem(12);
+      }
+
+      &.desktop {
+        @include breakpoint-down(medium) {
+          display: none;
+        }
+      }
+
+      &.mobile {
+        display: none;
+        width: rem(42);
+        @include breakpoint-down(medium) {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+
+  .benefits-and-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(32) 0;
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: rem(24);
+    }
+
+    .benefits {
+      & > * + * {
+        margin-top: rem(11);
+      }
+
+      @include breakpoint-down(medium) {
+        margin-bottom: rem(32);
+      }
+
+      p {
+        &::before {
+          display: inline-block;
+          content: "";
+          width: rem(8);
+          height: rem(8);
+          background: center / contain no-repeat url(/images/icon-check.svg);
+          padding-right: rem(32);
+        }
+      }
+    }
+  }
+}

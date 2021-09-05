@@ -1,0 +1,15 @@
+@use '../foundation/colors' as *;
+@use '../util' as *;
+
+.tag {
+  width: rem(80);
+  height: rem(19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $discount-background;
+  border-radius: rem(9.5);
+  font-size: rem(10);
+  font-weight: 800;
+  color: $discount-text;
+}
