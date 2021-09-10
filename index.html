@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/style.css">
-  <script defer src="/dist/script.js"></script>
+  <script defer src="/dist/main.js"></script>
   <title>Frontend Mentor | Interactive pricing component</title>
 </head>
 
@@ -23,14 +23,14 @@
       <div class="wrapper">
         <div class="pageviews-and-price">
           <div class="pageviews"><span class="views">100k</span> Pageviews</div>
-          <div class="price"><span class="dollars">$16.00</span> / month</div>
-          <input class="slider" id="slider" type="range" min="0" max="32" value="16" />
+          <div class="price"><span class="dollars">$16.00</span> / <span class="interval">month</span></div>
+          <input class="slider" id="slider" type="range" min="-2" max="2" value="0" />
         </div>
 
         <div class="select-billing">
           <span>Monthly Billing</span>
           <label class="toggle">
-            <input type="checkbox" />
+            <input class="billing" type="checkbox" />
             <span class="background"></span>
             <span class="circle"></span>
           </label>
@@ -41,11 +41,11 @@
       </div>
       <div class="wrapper wrapper--border-top">
         <div class="benefits-and-cta">
-          <div class="benefits">
-            <p>Unlimited websites</p>
-            <p>100% data ownership</p>
-            <p>Email reports</p>
-          </div>
+          <ul class="benefits">
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
           <button class="button cta">
             Start my trial
           </button>

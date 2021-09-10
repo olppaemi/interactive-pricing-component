@@ -79,6 +79,10 @@ main {
     justify-content: flex-end;
     margin-bottom: rem(40);
 
+    @include breakpoint-down(medium) {
+      justify-content: center;
+    }
+
     .toggle {
       margin: 0 rem(12);
     }
@@ -129,7 +133,7 @@ main {
         margin-bottom: rem(32);
       }
 
-      p {
+      li {
         &::before {
           display: inline-block;
           content: "";

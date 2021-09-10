@@ -6,7 +6,13 @@
   width: 100%;
   height: rem(8);
   cursor: pointer;
-  background: $full-slider-bar;
+  background: linear-gradient(
+    to right,
+    $full-slider-bar 0%,
+    $full-slider-bar 50%,
+    $empty-slider-bar 50%,
+    $empty-slider-bar 100%
+  );
   border-radius: rem(5);
 
   &::-webkit-slider-thumb {
@@ -16,5 +22,14 @@
     border-radius: 50%;
     background: center / rem(22) rem(13) no-repeat url(/images/icon-slider.svg), $slider-background;
     box-shadow: 0 rem(15) rem(30) hsla(174, 100%, 50%, 0.6);
+
+    &:active {
+      background-color: $slider-background-active !important;
+      cursor: grabbing;
+    }
+
+    &:hover {
+      background-color: $slider-background-hover;
+    }
   }
 }

@@ -2,7 +2,6 @@
 @use '../util' as *;
 
 .container {
-  max-width: rem(1440);
   background: top / contain no-repeat url(/images/bg-pattern.svg), $main-background;
 
   @include breakpoint(medium) {

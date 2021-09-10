@@ -1,6 +1,8 @@
 :root {
 	--soft-cyan: hsl(174, 77%, 80%);
 	--strong-cyan: hsl(174, 86%, 45%);
+	--blue-lagoon: hsl(174, 73%, 70%);
+	--light-sea-green: hsl(174, 65%, 41%);
 	--light-grayish-red: hsl(14, 92%, 95%);
 	--light-red: hsl(15, 100%, 70%);
 	--pale-blue: hsl(226, 100%, 87%);
@@ -13,15 +15,18 @@
 }
 
 $full-slider-bar: var(--soft-cyan);
+$empty-slider-bar: var(--light-grayish-blue);
 $slider-background: var(--strong-cyan);
+$slider-background-active: var(--light-sea-green);
+$slider-background-hover: var(--blue-lagoon);
+
 $discount-background: var(--light-grayish-red);
 $discount-text: var(--light-red);
 $cta-text: var(--pale-blue);
 $pricing-component-background: var(--white);
 $main-background: var(--very-pale-blue);
-$empty-slider-bar: var(--light-grayish-blue);
 $toggle-background: var(--light-grayish-blue2);
-$toggle-background-checked: var(--strong-cyan);
+$toggle-background-checked: var(--blue-lagoon);
 $text-gray-blue: var(--grayish-blue);
 $text-dark-blue: var(--dark-desaturated-blue);
 $cta-background: var(--dark-desaturated-blue);

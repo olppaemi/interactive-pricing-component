@@ -17,7 +17,7 @@ function scssTask() {
 
 // JavaScript Task
 function jsTask() {
-  return src("src/js/script.js", { sourcemaps: false })
+  return src("src/js/main.js", { sourcemaps: false })
     .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(terser())
     .pipe(dest("dist", { sourcemaps: "." }));
