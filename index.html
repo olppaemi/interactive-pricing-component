@@ -21,11 +21,13 @@
     </header>
     <main>
       <div class="wrapper">
-        <label class="pageviews-and-price">
+        <div class="pageviews-and-price">
           <div class="pageviews"><span class="views">100k</span> Pageviews</div>
           <div class="price"><span class="dollars">$16.00</span> / <span class="interval">month</span></div>
-          <input class="slider" id="slider" type="range" min="-2" max="2" value="0" />
-        </label>
+          <label class="slider" for="slider">
+            <input id="slider" type="range" min="-2" max="2" value="0" />
+          </label>
+        </div>
 
         <div class="select-billing">
           <span>Monthly Billing</span>
