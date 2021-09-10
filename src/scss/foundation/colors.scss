@@ -14,6 +14,8 @@
 	--dark-desaturated-blue: hsl(227, 35%, 25%);
 }
 
+$main-background: var(--very-pale-blue);
+
 $full-slider-bar: var(--soft-cyan);
 $empty-slider-bar: var(--light-grayish-blue);
 $slider-background: var(--strong-cyan);
@@ -24,7 +26,6 @@ $discount-background: var(--light-grayish-red);
 $discount-text: var(--light-red);
 $cta-text: var(--pale-blue);
 $pricing-component-background: var(--white);
-$main-background: var(--very-pale-blue);
 $toggle-background: var(--light-grayish-blue2);
 $toggle-background-checked: var(--blue-lagoon);
 $text-gray-blue: var(--grayish-blue);

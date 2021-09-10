@@ -2,13 +2,18 @@
 @use '../util' as *;
 
 .container {
-  background: top / contain no-repeat url(/images/bg-pattern.svg), $main-background;
+  background: top 13% center / rem(146) rem(146) no-repeat url(/images/pattern-circles.svg),
+    top / contain no-repeat url(/images/bg-pattern.svg), $main-background;
 
   @include breakpoint(medium) {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+
+  @include breakpoint-down(medium) {
+    background: top 10% center / rem(146) rem(146) no-repeat url(/images/pattern-circles.svg),
+      top / 100% rem(425) no-repeat url(/images/bg-pattern.svg), $main-background;
   }
 }
